@@ -1,7 +1,7 @@
 'use client';
 import axios from 'axios';
 import { useEffect, useState } from 'react'
-import { userDetailContext } from '@/context/UserDetailContext';
+import { UserDetailContext } from '@/context/UserDetailContext';
 
 function Provider({
     children,
@@ -23,9 +23,9 @@ function Provider({
 
     return (
 
-        <userDetailContext.Provider value={{ userDetail, setuserDetail }}>
+        <UserDetailContext.Provider value={{ userDetail, setuserDetail }}>
             <>  {children} </>
-        </userDetailContext.Provider>
+        </UserDetailContext.Provider>
 
     )
 }
